@@ -1,0 +1,36 @@
+.TH simple_shell "04/15/2024" "1.0" "simple_shell manual"
+
+.SH NAME
+simple_shell \- create a simple shell program to interact with a linux operating system.
+
+.SH SYNOPSIS
+hsh [options] [file]
+
+.SH DESCRIPTION
+Shell provides a basic interface for users to interact with their computer, allowing them to execute commands, navigate the file system, and manage processes.
+
+.SH EXAMPLE
+
+.RS +4
+$ ./hsh
+.RE
+.RS +4
+($) /bin/ls
+.RE
+.RS +4
+hsh main.c shell.c
+.RE
+.RS +4
+($)
+.RE
+.RS +4
+($) exit
+.RE
+.RS +4
+$
+
+.SH BUGS
+No known bugs.
+
+.SH AUTHORS
+
