@@ -1,18 +1,22 @@
 #ifndef SHELL_H_
 #define SHELL_H_
 
-
 #include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
+#include <sys/types.h>
 #include <sys/wait.h>
+#include <stdlib.h>
 #include <string.h>
+#include <unistd.h>
+#include <signal.h>
 
-#define MAX_COMMAND_LENGTH 100
 
-int main();
-void print_prompt();
+#define MAX_ARG 25
 
+int main(void);
+int getinput(void);
+char *removetrash(char *str, int len);
+int tokenize(char *command, char *argsC[]);
+int executecommand(char *argsC[]);
 
 
 
