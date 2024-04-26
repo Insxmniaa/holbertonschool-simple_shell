@@ -10,7 +10,7 @@ int getinput(void)
 {
     size_t n = 0;
     char *buff = NULL, *command, *argsC[MAX_ARG];
-    int size, argcount; 
+    int size; 
     
     size = getline(&buff, &n, stdin); /*getline waits the user to enter something in terminal*/
     if (size == -1)
@@ -22,13 +22,13 @@ int getinput(void)
             }
             else
             {
-                ("Failed to read user input");
+                printf("Failed to read user input");
                 free(buff);
             }
     }
 
     command = removetrash(buff, size);
-    argcount = tokenize(command, argsC);
+    tokenize(command, argsC);
 
     executecommand(argsC);
 
