@@ -7,14 +7,18 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
+#include <signal.h>
 
 
-#define MAX_INPUT 1024
-#define MAX_ARGS 100
+#define MAX_ARG 25
 
-void getinput();
-void execute_command(char **args);
-char **parse_input(char *input_line);
+int main(void);
+int getinput(void);
+char *removetrash(char *str, int len);
+int tokenize(char *command, char *argsC[]);
+int executecommand(char *argsC[]);
+
+
 
 
 #endif
