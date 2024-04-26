@@ -19,7 +19,7 @@ int main()
         {
             if (feof(stdin)) 
             {
-                printf("\nExiting shell...\n");
+                printf("\n");
                 break;  /*Handle end of file (Ctrl+D)*/
             }
             perror("Error reading command");
@@ -36,17 +36,13 @@ int main()
         else if (pid == 0) 
         {  /*Child process*/
             execlp(command, command, NULL);  /*Execute the command*/
-            perror("Command not found");
-            exit(1);
+            perror(command);
+            exit(127);
         } 
         else 
         {  /*Parent process*/
             waitpid(pid, &status, 0);  /*Wait for child process to finish*/
             
-            if (WIFEXITED(status) && WEXITSTATUS(status) != 0) 
-            {
-                printf("Command '%s' failed\n", command);
-            }
         }
     }
     return 0;
