@@ -11,7 +11,7 @@ int main(void)
     while(1)
     {
         getinput();
+           
     }
-   
     return (0);
 }
