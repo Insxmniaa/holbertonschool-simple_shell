@@ -10,10 +10,8 @@ int main(void)
 {
     while(1)
     {
-        printf("#cisfun$ ");
-        receiveCommand();
+        getinput();
     }
    
-
     return (0);
 }
