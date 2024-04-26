@@ -15,6 +15,7 @@
 #define MAX_INPUT 1024
 #define MAX_ARGS 100
 
+char *_getenv(const char *name);
 void getinput();
 void execute_command(char **args);
 char **parse_input(char *input_line);
@@ -22,6 +23,8 @@ void env(char **arv);
 void _setenv(char **arv);
 void _unsetenv(char **arv);
 char *_getenv(const char *name);
+void(*checkbuild(char **arv))(char **arv);
+
 
 
 #endif
