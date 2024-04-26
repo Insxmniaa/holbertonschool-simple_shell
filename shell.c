@@ -10,8 +10,10 @@ int main(void)
 {
     while(1)
     {
+        printf("$ ");
         getinput();
-           
+        
     }
+    
     return (0);
 }
