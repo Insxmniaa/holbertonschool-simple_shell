@@ -1,0 +1,23 @@
+.TH SIMPLE_SHELL "20240426" "VER 1.0" "simple_shell manual"
+
+.sh NAME
+simple_shell \- prompts a display to appear and awaits for a command to be written by the user.
+
+.SH SYNOPSIS
+gcc simple_shell.c get_command.c -o simple_shell
+.PP
+./simple_shell
+
+.SH DESCRIPTION
+simple_shell is a simpler version of the terminal that processes shell commands and executes them as the terminal would. It prompts a display that awaits commands like ls or pwd. Once you written the command press enter and the simple shell will look for the command inputted and if it exists it will execute. ther are some commands that wont be executed more on that on the bugs section.
+
+.SH Files
+.SS Files used to run program
+.PP
+simple_shell.c
+.PP
+get_command.c
+.PP
+main.h
+
+.SH AUTHORS
